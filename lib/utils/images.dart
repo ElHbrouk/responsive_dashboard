@@ -13,6 +13,10 @@ class Assets {
   /// assets/images/avatar3.svg
   static const String imagesAvatar3 = "assets/images/avatar3.svg";
 
+  /// Assets for imagesBalance
+  /// assets/images/balance.svg
+  static const String imagesBalance = "assets/images/balance.svg";
+
   /// Assets for imagesCard
   /// assets/images/card.svg
   static const String imagesCard = "assets/images/card.svg";
@@ -20,6 +24,14 @@ class Assets {
   /// Assets for imagesDashBoard
   /// assets/images/dash_board.svg
   static const String imagesDashBoard = "assets/images/dash_board.svg";
+
+  /// Assets for imagesExpenses
+  /// assets/images/expenses.svg
+  static const String imagesExpenses = "assets/images/expenses.svg";
+
+  /// Assets for imagesIncome
+  /// assets/images/income.svg
+  static const String imagesIncome = "assets/images/income.svg";
 
   /// Assets for imagesLogout
   /// assets/images/logout.svg

@@ -6,7 +6,7 @@ class TabletLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("TabletLayout"),
+      child: const Text("TabletLayout"),
     );
   }
 }
