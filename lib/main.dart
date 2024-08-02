@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/views/home_view.dart';
+import 'package:responsive_dashboard/features/presentation/home/view/home_view.dart';
 
 void main() {
   runApp(const ResponsiveDashBoard());
@@ -13,7 +13,9 @@ class ResponsiveDashBoard extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+        ),
         useMaterial3: true,
       ),
       home: const HomeView(),

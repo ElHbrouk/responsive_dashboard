@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:responsive_dashboard/widgets/all_expenses.dart';
-import 'package:responsive_dashboard/widgets/custom_drawer.dart';
+import 'package:responsive_dashboard/features/presentation/home/view/widgets/all_expenses.dart';
+import 'package:responsive_dashboard/features/presentation/home/view/widgets/custom_drawer.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});
@@ -11,7 +11,9 @@ class DesktopLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        Expanded(child: CustomDrawer()),
+        Expanded(
+          child: CustomDrawer(),
+        ),
         SizedBox(
           width: 32,
         ),
@@ -19,8 +21,12 @@ class DesktopLayout extends StatelessWidget {
           flex: 3,
           child: Column(
             children: [
-              Expanded(child: AllExpenses()),
-              Expanded(child: SizedBox()),
+              Expanded(
+                child: AllExpenses(),
+              ),
+              Expanded(
+                child: SizedBox(),
+              ),
             ],
           ),
         ),

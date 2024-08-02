@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/widgets/home_view_body.dart';
+import 'package:responsive_dashboard/features/presentation/home/view/widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -8,7 +8,10 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Color(0xfff8f9fc),
-      body: SafeArea(child: HomeViewBody()),
+      body: SafeArea(
+        child: HomeViewBody(),
+      ),
     );
   }
 }
+  

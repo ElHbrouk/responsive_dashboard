@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/models/all_expenses_item_model.dart';
-import 'package:responsive_dashboard/utils/images.dart';
-import 'package:responsive_dashboard/widgets/all_expenses_header.dart';
-import 'package:responsive_dashboard/widgets/all_expenses_item.dart';
+import 'package:responsive_dashboard/features/data/models/all_expenses_item_model.dart';
+import 'package:responsive_dashboard/core/utils/images.dart';
+import 'package:responsive_dashboard/features/presentation/home/view/widgets/all_expenses_header.dart';
+import 'package:responsive_dashboard/features/presentation/home/view/widgets/all_expenses_item.dart';
 
 class AllExpenses extends StatelessWidget {
   const AllExpenses({super.key});
