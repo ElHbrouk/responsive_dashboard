@@ -1,29 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/features/data/models/all_expenses_item_model.dart';
-import 'package:responsive_dashboard/features/presentation/home/view/widgets/all_expenses_item_header.dart';
+import 'package:responsive_dashboard/features/presentation/home/view/widgets/not_selected_item.dart';
+import 'package:responsive_dashboard/features/presentation/home/view/widgets/selected_item.dart';
 
 class AllExpensesItem extends StatelessWidget {
-  const AllExpensesItem({super.key, required this.itemModel});
+  const AllExpensesItem({
+    super.key,
+    required this.itemModel,
+    required this.isSelected,
+  });
   final AllExpensesItemModel itemModel;
+  final bool isSelected;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding:
-          const EdgeInsetsDirectional.symmetric(horizontal: 20, vertical: 16),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(
-          width: 1,
-          color: const Color(0xfff1f1f1),
-        ),
+    return AnimatedCrossFade(
+      duration: const Duration(milliseconds: 200),
+      crossFadeState: isSelected == true
+          ? CrossFadeState.showFirst
+          : CrossFadeState.showSecond,
+      firstChild: SelectedItem(
+        itemModel: itemModel,
       ),
-      child: Column(
-        children: [
-          AllExpensesItemHeader(
-            image: itemModel.image,
-          )
-        ],
+      secondChild: NotSelectedItem(
+        itemModel: itemModel,
       ),
     );
   }
