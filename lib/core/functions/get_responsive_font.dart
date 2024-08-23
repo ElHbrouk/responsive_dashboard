@@ -1,8 +1,7 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/core/utils/size_config.dart';
 
-double getResponsiveFont(BuildContext context, {required double fontSize}) {
+double getResponsiveFont(BuildContext context,{required double fontSize}) {
   double fontFactor = getFontFactor(context);
 
   double responsiveFont = fontSize * fontFactor;
@@ -14,12 +13,15 @@ double getResponsiveFont(BuildContext context, {required double fontSize}) {
 
 double getFontFactor(BuildContext context) {
   double width = MediaQuery.sizeOf(context).width;
-
-  if (width < 600) {
-    return width / 400;
-  } else if (width < 900) {
-    return width / 700;
+  // var dispatcher = PlatformDispatcher.instance;
+  // var physicalWidth = dispatcher.views.first.physicalSize.width;
+  // var devicePixelRation = dispatcher.views.first.devicePixelRatio;
+  // double width = physicalWidth / devicePixelRation;
+  if (width < SizeConfig.tablet) {
+    return width / 600;
+  } else if (width < SizeConfig.desktop) {
+    return width / 1200;
   } else {
-    return width / 1000;
+    return width / 1800;
   }
 }
